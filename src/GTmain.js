@@ -20,6 +20,15 @@ const GTmain = () => {
         setShowbtn(true);
         setDisplaySt("click button to view the answer");
     }
+
+    const pauseCode = (millis) => {
+        var date = new Date()
+        var currDate = new Date();
+        
+        while(currDate - date < millis){
+            currDate = new Date();
+        }
+    }
     
     const maximum_time_to_infect = (matrix, queue) => {
         if(queue.length === 0) return "No infected people in the neighbourhood!!"
