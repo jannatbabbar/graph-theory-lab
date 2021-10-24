@@ -3,6 +3,7 @@ const GTmain = () => {
 
     const [displaySt,setDisplaySt] = useState("");
     const [matrix, setMatrix] = useState([[]]);
+    const [showbtn,setShowbtn] = useState(false);
     
     const generate_random_matrix = (rows, columns) => {
         const matrix = new Array(rows).fill(0).map(() => new Array(columns).fill(0));    
@@ -16,6 +17,7 @@ const GTmain = () => {
             }
         }
         setMatrix(matrix);
+        setShowbtn(true);
         setDisplaySt("click button to view the answer");
     }
     
@@ -145,7 +147,26 @@ const GTmain = () => {
                 <h1 className="mainHeading">MULTISOURCE BFS TO VISUALISE COVID SPREAD</h1>
             </div>
             <div>
-                <button className = "btn" onClick={() => generate_random_matrix(4,7)}>CREATE MATRIX</button>
+                <h5 className = "info" >
+                This is a covid spread visualiser, where we have created a grid of squares. The red ones denote infected patients, green denotes a healthy person and white denotes an empty space between them. The virus can spread from an infected person to a healthy person if they are next to each other(not including diagonals). We aim at calculating the total number of people which can be infected, and how much time it takes to infect them, assuming that it takes 1 week to transfer the virus from 1 person to another.
+                </h5>
+                <div className="clrbtn">
+                    <div className = "colorcontain">
+                        <div className="colors">
+                            <div className="redsq"></div>
+                            <h6 className="patient">Infected Patients</h6>
+                        </div>
+                        <div className="colors">
+                            <div className="greensq"></div>
+                            <h6 className="patient">Healhty People</h6>
+                        </div>
+                        <div className="colors">
+                            <div className="whitesq"></div>
+                            <h6 className="patient">Empty Space</h6>
+                        </div>
+                    </div>
+                    <button className = "btn createbtn" onClick={() => generate_random_matrix(4,7)}>CREATE MATRIX</button>
+                </div>
             </div>
             
             <div className="container"> 
@@ -162,26 +183,22 @@ const GTmain = () => {
                     // count += 1
                     return(
                         <div className="container1">
-
-                            <div>
-                                <div>
-                                    <div style = {{backgroundColor: color}} className="square" >
-                                    </div>
-                                </div>
+                            <div style = {{backgroundColor: color}} className="square" >
                             </div>
-                            {/* <h5>{displaySt}</h5> */}
                         </div>
                         )
                     })
             }
-            <div>
-                <div><button className="btn" onClick = {() => solve(4,7)}>GIVE RESULT</button></div>
-                
-                <h5>{displaySt}</h5>
-                <div className = "space">
-                    {/* <h1>hello</h1> */}
+                <div>
+                    <div>
+                        { showbtn &&<button className="btn resbtn" onClick = {() => solve(4,7)}>GIVE RESULT</button>}
+                    </div>
+                    
+                    <h5 className="info">{displaySt}</h5>
+                    <div className = "space">
+                        {/* <h1>hello</h1> */}
+                    </div>
                 </div>
-            </div>
             </div>
         </div>        
     );

@@ -43,6 +43,69 @@ code {
   margin-top: 20px;
   align-items: center;
 }
+
+.clrbtn
+{
+  display: flex; 
+  align-items:center;
+  /* width: 370px; */
+  /* flex-flow: wrap; */
+}
+.colors{
+  display: flex; 
+  flex-flow: wrap;
+  /* width: 120px; */
+  margin-left: 200px;
+  margin-top: 3px;
+}
+.info{
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #5a5a5a;
+}
+.redsq {
+  background-color: #FF7171;
+  /* color:  */
+  font-size: 19px;
+  /* margin-right: 2px; */
+  height: 20px;
+  width: 20px;
+  /* margin-top: 15px; */
+  padding-top: 0.1vh;
+  border-radius: 5px;
+
+}
+.greensq {
+  background-color: #70AF85;
+  /* color:  */
+  font-size: 19px;
+  /* margin-right: 2px; */
+  height: 20px;
+  width: 20px;
+  /* margin-top: 15px; */
+  padding-top: 0.1vh;
+  border-radius: 5px;
+
+}
+
+.whitesq {
+  background-color: #FEF5ED;
+  /* color:  */
+  font-size: 19px;
+  /* margin-right: 2px; */
+  height: 20px;
+  width: 20px;
+  /* margin-top: 15px; */
+  padding-top: 0.1vh;
+  border-radius: 5px;
+
+}
+.patient{
+  margin: 0;
+  margin-left: 6px;
+  margin-top: 3px;
+  color: #5a5a5a;
+}
 .square{
   /* background-color: rgb(102, 45, 102); */
   color: #16181b;
@@ -56,32 +119,35 @@ code {
   border-radius: 5px;
 }
 
+.createbtn{
+  margin-left: 200px;
+}
+
 .space{
   height: 500px;
 }
 
 .btn {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Georgia;
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
   color: #ffffff;
-  font-size: 17px;
-  background: #6886C5;
+  font-size: 9px;
+  background: #FFAAA5;
   padding: 8px 9px 8px 9px;
   text-decoration: none;
+  border: none;
+  margin-top: 2%;
 }
-
+.resbtn{
+  margin-top: 20px;
+  /* margin-left: 120px; */
+}
 .btn:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #FABEA7;
   text-decoration: none;
 }
-
 /* button{
   margin-left: 45%;
 } */
